@@ -4,7 +4,7 @@ export default function Post() {
     return (
         <div className='post'>
             
-                <img className='post-image'src='\public\images\aaron-burden-U53tH5NJG7o-unsplash.jpg'  alt='Blog Image'/>
+                <img className='post-image'src='/public/images/aaron-burden-U53tH5NJG7o-unsplash.jpg'  alt='Blog Image'/>
             
             <div className='post-info'>
                 <div className='post-title'>Title</div>
