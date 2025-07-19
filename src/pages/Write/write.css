@@ -1,0 +1,64 @@
+.write {
+    padding-top: 50px;
+}
+
+.write-form {
+    position: relative;
+}
+
+.write-form-container {
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.write-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #666;
+    color: #666;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.write-input {
+    background-color: #EAE4D5;
+    font-size: 1.8rem;
+    border: none;
+    width: 70vw;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.write-input:focus {
+    outline: none;
+}
+
+.write-text {
+    font-size: 1.2rem;
+    height: 100vh;
+}
+
+.write-submit {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: #fff;
+    background-color: #222;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.write-img {
+    margin-left: 150px;
+    width: 70vw;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}

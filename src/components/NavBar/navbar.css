@@ -1,0 +1,50 @@
+.nav {
+    width: 100%;
+    height: 5rem;
+    background-color: #000000;
+    color: #F6F6F6;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    font-size: 1.3rem;
+    z-index: 1000;
+}
+
+.top-left, .top-right {
+    flex: 3;
+    
+}
+
+.top-centre {
+    flex: 6;
+}
+
+.top-left p {
+    cursor: pointer;
+}
+
+.top-icon {
+    margin-right: 1rem;
+    color: #c7c7c7;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav-list-item {
+    margin-right: 1.5rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.top-search-icon {
+    color: #d4d4d4;
+    cursor: pointer;
+}

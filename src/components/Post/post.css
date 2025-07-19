@@ -1,0 +1,125 @@
+.post {
+  
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 5px;
+    /* padding: 30px; */
+    border: 1px solid #daccbe;
+    border-radius: 8px;
+    max-width: 45%;
+    height: auto;
+}
+
+.post-image {
+    width: 100%;
+    height: 130px;
+    max-width: 100%;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.post-title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+.post-desc {
+    font-family: "Lora", serif;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #4b4b4b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.post-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-family: "Varela Round", sans-serif;
+}
+
+.post-category {
+    background-color: #e2dac5;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #323232;
+    cursor: pointer;
+}
+
+.post-button {
+    width: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #505050;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+
+.post-button:hover {
+    transform: translateY(-0.2px);
+    background-color: #646464;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .post {
+    flex-direction: column;
+    height: auto;
+    max-width: 90%;
+  }
+
+  .post-image {
+    max-width: 100%;
+    width: 100%;
+    height: 180px;
+    margin-right: 0;
+  }
+
+  .post-info {
+    padding: 15px;
+  }
+
+  .post-button {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-title {
+    font-size: 1.4rem;
+  }
+
+  .post-desc {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 3;
+  }
+
+  .post-category {
+    font-size: 0.8rem;
+    padding: 2px 8px;
+  }
+
+  .post-button {
+    width: 100%;
+  }
+}
