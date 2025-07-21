@@ -4,7 +4,7 @@ export default function Write() {
     return (
         <div className="write">
             <img className='write-img'
-                src="/public/images/kristaps-ungurs-x7GWaDn1k9k-unsplash.jpg"
+                src=" /images/kristaps-ungurs-x7GWaDn1k9k-unsplash.jpg"
             />
             <form className="write-form">
                 <div className="write-form-container">

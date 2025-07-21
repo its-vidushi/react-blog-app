@@ -2,5 +2,13 @@
     flex: 3;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 50px;
+    margin-left: 1rem;
+}
+
+@media (max-width: 500px) {
+  .posts {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
 }

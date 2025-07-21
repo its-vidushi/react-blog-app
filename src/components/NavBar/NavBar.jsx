@@ -23,7 +23,7 @@ export default function NavBar() {
                     </li>
                 </ul>
             </div> 
-            <i class="top-search-icon fa-solid fa-magnifying-glass"></i>
+            
             <div className='top-right'>
                 <i class="top-icon fa-brands fa-github"></i>
                 <i class="top-icon fa-brands fa-linkedin-in"></i>
