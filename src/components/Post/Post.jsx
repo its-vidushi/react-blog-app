@@ -1,6 +1,7 @@
 import './post.css'
+import { Link } from 'react-router-dom'
 
-export default function Post() {
+export default function Post({ id }) {
     return (
         <div className='post'>
             
@@ -13,24 +14,10 @@ export default function Post() {
                     <span className='post-category'>Life</span>
                     <span className='post-category'>Tech</span>
                 </div>
-                <button className='post-button'>Read More</button>
+                <Link to={`/post/${id}`} className='link'>
+                    <button className='post-button'>Read More</button>
+                </Link>
             </div>
         </div>
-        // <div className='post'>
-        //     <img src='src\assets\woman-elegant-dress-standing-summer-field.jpg' alt='Post' />
-        //     <div className='post-info'>
-        //         <div className='post-categories'>
-        //             <span className='post-category'>Life</span>
-        //             <span className='post-category'>Tech</span>
-        //         </div>
-        //         <span className='post-title'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-        //         <hr />
-                
-        //     </div>
-        //     <p className='post-desc'>
-        //         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Doloribus, cumque. 
-        //         Quisquam, voluptatum. Doloribus, cumque. Quisquam, voluptatum. Doloribus, cumque.
-        //     </p>
-        // </div>
     )
 }

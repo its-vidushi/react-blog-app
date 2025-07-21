@@ -14,7 +14,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/post/:postId" element={<Single />} />
+        <Route path="/post/:id" element={<Single />} />
         <Route path="/write" element={<Write />} />
         {/* Add more routes as needed */}
       </Routes>  

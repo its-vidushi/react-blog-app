@@ -1,6 +1,9 @@
 import "./singlePost.css";
+import { useParams } from "react-router-dom";
 
 export default function SinglePost() {
+  const { id } = useParams();
+
   return (
     <div className="single-post">
       <div className="single-post-container">
