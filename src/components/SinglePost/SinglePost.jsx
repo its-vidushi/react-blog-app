@@ -8,7 +8,7 @@ export default function SinglePost() {
     <div className="single-post">
       <div className="single-post-container">
         <img
-          src="/public/images/aaron-burden-U53tH5NJG7o-unsplash.jpg"
+          src="/images/aaron-burden-U53tH5NJG7o-unsplash.jpg"
           alt="Post Header"
         />
         <h1 className="single-post-title">
