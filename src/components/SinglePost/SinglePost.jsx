@@ -1,59 +1,50 @@
 import "./singlePost.css";
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function SinglePost() {
   const { id } = useParams();
+  const [post, setPost] = useState(null);
+
+  useEffect(() => {
+    fetch('/posts.json')
+    .then(response => response.json())
+    .then(data => {
+        const foundPost = data.posts.find(p => p.id === Number(id));
+        setPost(foundPost);
+      })
+      .catch(err => console.error('Error loading post:', err));
+  }, [id]);
+
+  if (!post) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="single-post">
       <div className="single-post-container">
         <img
           src="/images/aaron-burden-U53tH5NJG7o-unsplash.jpg"
-          alt="Post Header"
+          alt="Post Banner"
         />
         <h1 className="single-post-title">
-          Lorem ipsum dolor, sit amet.
+          {post.title}
         </h1>
         <div className="single-post-about">
           <span className="single-post-author">
-            Author: John Doe &bull; On: 18 July 2025
+            Author: John Doe
           </span>
           <span className="single-post-read-time">5 min read</span>
         </div>
+        <div className="single-post-categories">
+          {post.tags.map(tag => (
+            <span className="single-post-category" key={tag}>
+              {tag}
+            </span>
+          ))}
+        </div>
         <p className="single-post-content">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet
-          consectetur adipiscing elit. Quisque faucibus ex sapien vitae
-          pellentesque sem placerat. In id cursus mi pretium tellus duis
-          convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
-          fringilla lacus nec metus bibendum egestas. Iaculis massa nisl
-          malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
-          aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos
-          himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit.
-          Quisque faucibus ex sapien vitae pellentesque sem placerat. In id
-          cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam
-          urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-          egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet
-          consectetur adipiscing elit. Quisque faucibus ex sapien vitae
-          pellentesque sem placerat. In id cursus mi pretium tellus duis
-          convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
-          fringilla lacus nec metus bibendum egestas. Iaculis massa nisl
-          malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
-          aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos
-          himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit.
-          Quisque faucibus ex sapien vitae pellentesque sem placerat. In id
-          cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam
-          urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-          egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
+          {post.body}
         </p>
       </div>
     </div>

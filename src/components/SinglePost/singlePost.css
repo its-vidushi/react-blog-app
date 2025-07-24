@@ -33,6 +33,23 @@
     color: #666;
 }
 
+.single-post-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 25px 20px;
+}
+
+.single-post-category {
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #323232;
+    border: 1.5px solid #323232;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
 .single-post-content {
     margin: 0 25px 20px;
     font-size: 1rem;

@@ -1,3 +1,27 @@
 .home {
     display: flex;
 }
+
+.more-button {
+    margin: 0 auto 6rem;
+    display: flex;
+    align-items: last baseline;
+    width: auto;
+    height: 40px;
+    font-size: 1.2rem;
+    position: relative;
+    top: 96%;
+    background-color: transparent;
+    color: #3c3c3c;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
+    .more-button {
+        margin: 0 auto 2rem;
+    }
+}

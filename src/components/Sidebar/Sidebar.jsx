@@ -22,10 +22,10 @@ export default function Sidebar() {
             <div className='sidebar-item'>
                 <span className='sidebar-title'>FOLLOW ME</span>
                 <div className='sidebar-socials'>
-                    <i class="sidebar-icon fa-brands fa-github"></i>
-                    <i class="sidebar-icon fa-brands fa-linkedin-in"></i>
-                    <i class="sidebar-icon fa-brands fa-instagram"></i>
-                    <i class="sidebar-icon fa-regular fa-envelope"></i>
+                    <i className="sidebar-icon fa-brands fa-github"></i>
+                    <i className="sidebar-icon fa-brands fa-linkedin-in"></i>
+                    <i className="sidebar-icon fa-brands fa-instagram"></i>
+                    <i className="sidebar-icon fa-regular fa-envelope"></i>
                 </div>
             </div>
         </div>

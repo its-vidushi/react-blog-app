@@ -3,10 +3,12 @@ import './write.css';
 export default function Write() {
     return (
         <div className="write">
-            <img className='write-img'
-                src=" /images/kristaps-ungurs-x7GWaDn1k9k-unsplash.jpg"
-            />
+            
             <form className="write-form">
+                <img className='write-img'
+                src="/images/kristaps-ungurs-x7GWaDn1k9k-unsplash.jpg"
+                alt="Post Header"
+                />
                 <div className="write-form-container">
                     <label htmlFor="file-input">
                         <i className="write-icon fas fa-plus"></i>

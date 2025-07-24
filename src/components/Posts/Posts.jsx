@@ -1,17 +1,30 @@
-import './posts.css'
-import Post from '../Post/Post'
+import { useEffect, useState } from "react";
+import "./posts.css";
+import Post from "../Post/Post";
 
-export default function Posts() {
-    return (
-        <div className='posts'>
-            <Post id={1} />
-            <Post id={2} />
-            <Post id={3} />
-            <Post id={4} />
-            <Post id={5} />
-            <Post id={6} />
-            <Post id={7} />
-            <Post id={8} />
-        </div>
-    )
+export default function Posts({ limit }) {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("/posts.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const selectedPosts = limit ? data.posts.slice(0, limit) : data.posts;
+        setPosts(selectedPosts);
+      });
+  }, [limit]);
+
+  return (
+    <div className="posts">
+      {posts.map((post) => (
+        <Post
+          key={post.id}
+          id={post.id}
+          title={post.title}
+          body={post.body}
+          tags={post.tags}
+        />
+      ))}
+    </div>
+  );
 }
