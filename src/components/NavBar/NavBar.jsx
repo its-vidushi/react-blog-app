@@ -26,11 +26,7 @@ export default function NavBar() {
               READ
             </Link>
           </li>
-          <li className="nav-list-item">
-            <Link to="/" className="link">
-              CONTACT
-            </Link>
-          </li>
+          
           <li className="nav-list-item">
             <Link to="/write" className="link">
               WRITE
