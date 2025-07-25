@@ -6,7 +6,7 @@ export default function Posts({ limit }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("/posts.json")
+    fetch("https://dummyjson.com/posts")
       .then((res) => res.json())
       .then((data) => {
         const selectedPosts = limit ? data.posts.slice(0, limit) : data.posts;

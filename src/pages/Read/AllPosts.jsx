@@ -8,7 +8,7 @@ export default function AllPosts() {
   const postsPerPage = 6;
 
   useEffect(() => {
-    fetch("/posts.json")
+    fetch("https://dummyjson.com/posts")
       .then((response) => response.json())
       .then((data) => setPosts(data.posts));
   }, []);

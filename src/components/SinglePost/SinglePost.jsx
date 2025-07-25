@@ -7,7 +7,7 @@ export default function SinglePost() {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    fetch('/posts.json')
+    fetch('https://dummyjson.com/posts')
     .then(response => response.json())
     .then(data => {
         const foundPost = data.posts.find(p => p.id === Number(id));
